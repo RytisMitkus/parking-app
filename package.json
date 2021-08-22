@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "serve": "lerna run serve"
+    "serve": "lerna run serve --stream"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
