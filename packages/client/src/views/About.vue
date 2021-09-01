@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     fetchData() {
-      return axios.get('/api')
+      return axios.get('/test')
     },
   },
   created() {

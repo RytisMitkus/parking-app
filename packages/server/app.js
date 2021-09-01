@@ -18,6 +18,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/test', (req, res) => {
+  res.json({
+    message: 'testuxsaz',
+  })
+})
+
 app.use('/api/auth/', authRouter)
 
 app.listen(PORT, () => {
