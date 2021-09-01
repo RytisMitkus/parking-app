@@ -21,6 +21,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "serve": "nodemon app.js"
+    "serve": "nodemon app.js",
+    "deploy": "pm2 restart app.js"
   }
 }
