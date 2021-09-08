@@ -14,7 +14,13 @@ const PORT = process.env.PORT || 3000
 app.use(morgan('tiny'));
 app.use(express.json());
 app.use(passport.initialize());
-app.use(cors())
+app.use(
+  cors({
+    credentials: true,
+    origin: ['http://localhost:3000', 'http://localhost:8080', 'http://localhost:8080']
+  })
+
+)
 
 
 app.get('/', (req, res) => {
@@ -28,7 +34,13 @@ app.get('/api/test', (req, res) => {
   })
 })
 
-app.use('/api/auth/', authRouter)
+app.use('/api/auth/', authRouter, function (req, res, next) {
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, Content-Type, Accept"
+  );
+  next();
+})
 
 app.listen(PORT, () => {
   console.log(`Server is listening at http://localhost:${PORT}`)

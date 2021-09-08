@@ -1,18 +1,14 @@
 <template>
-  <div>
-    <button @click="signIn">Sign In</button>
-  </div>
+  <a href="api/auth/google">auth google</a>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'signIn',
-  methods: {
-    signIn() {
-      return axios.get('api/auth/google')
-    },
+  data() {
+    return {
+      auth: null,
+    }
   },
 }
 </script>
