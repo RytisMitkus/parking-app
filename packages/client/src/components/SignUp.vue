@@ -1,5 +1,5 @@
 <template>
-  <a href="api/auth/google">auth google</a>
+  <a href="/api/auth/google">auth google</a>
 </template>
 
 <script>
