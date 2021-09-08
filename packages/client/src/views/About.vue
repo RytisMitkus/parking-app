@@ -4,7 +4,7 @@
 
     <h4>{{ message }}</h4>
     <h1>{{ anotherMessage }}</h1>
-    <button @click="fetchData2">fetch2</button>
+    <button @click="fetchData">fetch2</button>
     <Btn btnName="mygtukas" />
     <Btn btnName="2" />
     <Btn btnName="zyro" />

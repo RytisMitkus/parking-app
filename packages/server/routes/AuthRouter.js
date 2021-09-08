@@ -19,9 +19,11 @@ passport.use(new GoogleStrategy({
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 
+
 router.get('/google/callback',
     passport.authenticate('google', { failureRedirect: '/hey', session: false }),
     (req, res) => {
+
         res.send(req.user);
     }
 
